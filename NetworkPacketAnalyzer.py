@@ -15,8 +15,7 @@ import networkx as nx
 logging.basicConfig(filename='packet_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Geolocation setup (requires geoip2 database)
-reader = geoip2.database.Reader(
-    'C:/Users/uzouk/OneDrive/Desktop/Nettwork Packet Analyzer/GeoLite2-City.mmdb')  # Ensure you download this database file
+reader = geoip2.database.Reader('./GeoLite2-City.mmdb')  # Ensure you download this database file
 
 # Session tracking dictionary
 sessions = defaultdict(list)
